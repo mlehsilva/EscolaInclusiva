@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Foco visível obrigatório para navegação por teclado */
+*:focus-visible {
+  outline: 3px solid #facc15 !important;
+  outline-offset: 3px !important;
+}
+
+/* Modo Alto Contraste */
+.high-contrast {
+  background-color: #000000 !important;
+  color: #ffff00 !important;
+}
+.high-contrast * {
+  background-color: #000000 !important;
+  color: #ffff00 !important;
+  border-color: #ffff00 !important;
+}
+
+/* Filtro para Daltonismo (Deuteranopia/Protanopia simulado via contraste) */
+.colorblind-safe {
+  filter: contrast(115%) saturate(130%);
+}
